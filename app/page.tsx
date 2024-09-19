@@ -2,100 +2,142 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <body className="w-screen h-screen bg-white text-black items-center justify-center flex "> 
+      <div className=" border drop-shadow-lg h-3/4 w-1/2 rounded-3xl flex-row flex ">
+        <div className="w-2/4 h-full  items-center flex-col flex border-[10px] rounded-3xl bg-gradient-to-t from-indigo-800 to-indigo-500">
+          <h1 className="p-5 text-xl font-bold text-white mt-5">Your Result</h1>
+          <div className="h-48 w-48 text-xl text-white rounded-full items-center flex justify-center flex-col bg-gradient-to-t from-indigo-800 to-indigo-500 ">
+            <h1 className="text-7xl font-bold">76</h1>
+            <p className="text-sm">of 100</p>
+          </div>
+          <div className="items-center justify-center flex flex-col text-center text-white ">
+            <h1 className="text-3xl font-semibold mt-5 mb-5">Great</h1>
+            <p className="items-center justify-center flex w-72">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="flex flex-col p-8">
+          <h1 className="text-2xl font-bold mb-7">Summary</h1>
+          <div className="flex flex-row justify-between rounded-xl mb-8  p-5 h-14 w-80 items-center bg-red-100">
+            <div className="flex flex-row items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="#F55"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.25"
+                  d="M10.833 8.333V2.5l-6.666 9.167h5V17.5l6.666-9.167h-5Z"
+                />
+              </svg>
+              <p className="text-red-500 font-bold pl-2">Reaction</p>
+            </div>
+            <p className="font-bold">
+              80 <span className="text-gray-500">/ 100</span>
+            </p>
+          </div>
+          <div className="flex flex-row justify-between rounded-xl mb-8 p-5 h-14 w-80 items-center bg-yellow-100">
+            <div className="flex flex-row items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="#FFB21E"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.25"
+                  d="M5.833 11.667a2.5 2.5 0 1 0 .834 4.858"
+                />
+                <path
+                  stroke="#FFB21E"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.25"
+                  d="M3.553 13.004a3.333 3.333 0 0 1-.728-5.53m.025-.067a2.083 2.083 0 0 1 2.983-2.824m.199.054A2.083 2.083 0 1 1 10 3.75v12.917a1.667 1.667 0 0 1-3.333 0M10 5.833a2.5 2.5 0 0 0 2.5 2.5m1.667 3.334a2.5 2.5 0 1 1-.834 4.858"
+                />
+                <path
+                  stroke="#FFB21E"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.25"
+                  d="M16.447 13.004a3.334 3.334 0 0 0 .728-5.53m-.025-.067a2.083 2.083 0 0 0-2.983-2.824M10 3.75a2.085 2.085 0 0 1 2.538-2.033 2.084 2.084 0 0 1 1.43 2.92m-.635 12.03a1.667 1.667 0 0 1-3.333 0"
+                />
+              </svg>
+              <p className="text-yellow-500 font-bold pl-2">Memory</p>
+            </div>
+            <p className="font-bold">
+            92 <span className="text-gray-500">/ 100</span>
+            </p>
+          </div>
+          <div className="flex flex-row justify-between rounded-xl mb-8 p-5 h-14 w-80 items-center bg-green-100">
+            <div className="flex flex-row items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="#00BB8F"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.25"
+                  d="M7.5 10h5M10 18.333A8.333 8.333 0 1 0 1.667 10c0 1.518.406 2.942 1.115 4.167l-.699 3.75 3.75-.699A8.295 8.295 0 0 0 10 18.333Z"
+                />
+              </svg>
+              <p className="text-green-500 font-bold pl-2">Verbal</p>
+            </div>
+            <p className="font-bold">
+            61 <span className="text-gray-500">/ 100</span>
+            </p>
+          </div>
+          <div className="flex flex-row justify-between rounded-xl mb-8 p-5 h-14 w-80 items-center bg-blue-100">
+            <div className="flex flex-row items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="#1125D6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.25"
+                  d="M10 11.667a1.667 1.667 0 1 0 0-3.334 1.667 1.667 0 0 0 0 3.334Z"
+                />
+                <path
+                  stroke="#1125D6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.25"
+                  d="M17.5 10c-1.574 2.492-4.402 5-7.5 5s-5.926-2.508-7.5-5C4.416 7.632 6.66 5 10 5s5.584 2.632 7.5 5Z"
+                />
+              </svg>
+              <p className="text-blue-500 font-bold pl-2">Visual</p>
+            </div>
+            <p className="font-bold">
+            72 <span className="text-gray-500">/ 100</span>
+            </p>
+          </div>
+          <p className="flex items-center font-semibold justify-center w-full bg-slate-600 text-white h-16 rounded-full hover:bg-gradient-to-t from-indigo-800 to-indigo-500">
+            Continue
+          </p>
+        </div>
+      </div>
+    </body>
   );
 }
